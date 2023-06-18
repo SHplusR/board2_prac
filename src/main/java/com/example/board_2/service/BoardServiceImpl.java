@@ -58,8 +58,9 @@ public class BoardServiceImpl implements BoardService {
     @Override
     public void removeWithReplies(Long bno){
         //삭제 기능 구현, 트랜잭션 추가.
-        replyRepository.deleteByBno(bno); //댓글 삭제
         boardRepository.deleteById(bno);
+        replyRepository.deleteByBno(bno); //댓글 삭제
+
 
     }
 

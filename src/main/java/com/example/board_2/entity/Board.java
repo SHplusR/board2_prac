@@ -19,7 +19,8 @@ public class Board extends BaseEntity {
 
     private String content;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    //(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = {CascadeType.ALL})
     private Member writer;
 
     public void changeTitle(String title){

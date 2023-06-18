@@ -53,7 +53,7 @@ public class BoardController {
 
     @PostMapping("/remove")
     public String remove(long bno, RedirectAttributes redirectAttributes){
-        log.info("bno : " +bno);
+        log.info("remove bno : " +bno);
         boardService.removeWithReplies(bno);
         redirectAttributes.addFlashAttribute("msg",bno);
         return "redirect:/board/list";
