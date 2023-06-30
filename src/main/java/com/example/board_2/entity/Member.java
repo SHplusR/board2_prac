@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Getter
 @ToString
+@Table(name = "member")
 public class Member extends BaseEntity {
     @Id
     private String email;

@@ -22,6 +22,11 @@ public class BoardController {
 
     private final BoardService boardService;
 
+    @GetMapping("/from")
+    public void from(){
+        System.out.println("it is basic html");
+    }
+
     @GetMapping("/list")
     public void list(PageRequestDTO pageRequestDTO, Model model){
         log.info("list..........."+pageRequestDTO);

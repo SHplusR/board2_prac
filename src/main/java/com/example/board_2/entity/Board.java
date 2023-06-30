@@ -2,6 +2,8 @@ package com.example.board_2.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Builder
@@ -19,8 +21,8 @@ public class Board extends BaseEntity {
 
     private String content;
 
-    //(fetch = FetchType.LAZY)
-    @ManyToOne(cascade = {CascadeType.ALL})
+//    @ManyToOne (fetch = FetchType.LAZY)
+@ManyToOne (cascade = CascadeType.ALL)
     private Member writer;
 
     public void changeTitle(String title){

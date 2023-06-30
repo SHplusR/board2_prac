@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Getter
 @ToString(exclude = "board")
 public class Reply extends BaseEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long rno;

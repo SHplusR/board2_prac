@@ -108,7 +108,7 @@
         function loadJSONData() {
           $.getJSON('/replies/board/'+bno, function(arr){
 
-            console.log(arr);
+            console.log("getjson : "+arr);
 
             var str ="";
 
@@ -144,7 +144,7 @@
           $('input[name="replyer"]').val('');
 
 
-          $(".modal-footer .btn").hide(); //모달 내의 모든 버튼을 안 보이도록
+          $(".modal-footer .btn").hide(); //모달 내의 모든 버튼을 안 보이도록 ( 원래는 remove,modify, save, close버튼이 있다.)
           $(".replySave, .replyClose").show(); //필요한 버튼들만 보이도록
 
         });
@@ -164,7 +164,7 @@
             contentType: 'application/json; charset=utf-8',
             dataType: 'json',
             success: function(data){
-              console.log(data);
+              console.log("replyService.getList(bno) : "+data);
 
               var newRno = parseInt(data);
 
